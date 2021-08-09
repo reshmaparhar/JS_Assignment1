@@ -1,0 +1,64 @@
+Entity
+1)Society
+2)Building
+3)Wing
+4)Flat
+
+Actors
+1)Resident
+
+
+1)Society
+Attributes:
+1)Society name (String)
+2)Society ID  (String)
+3)Society owner (String)
+4)Society Address (addressSchema)
+5)Society manager (String)
+6)Contact No (String)
+7)Buildings (array)
+
+2)Building
+Attributes:
+1)Building name (String)
+2)Building ID (String)
+3)Society ID (String)
+4)wingExists (boolean)
+
+3)Wing
+Attributes:
+1)Wing name (String)
+2)Wing ID(String)
+3)Building ID (String)
+4)Society ID(String)
+
+4)Flat
+Attributes:
+1)Flat name (String)
+2)Flat ID (String)
+3)Wing ID (String)
+4)Building ID (String)
+5)Society ID (String)
+6)Floor No (Number)
+
+5)Resident
+Attributes:
+1)Resident ID (String)
+2)Resident name (String)
+3)Contact Number (String)
+4)Flats array[flatSchema]
+8)Password(String)
+
+flatSchema = {
+    Society ID:String,
+    Building ID:String,
+    Wing ID:String,
+    flats : [Flat ID (String)]
+}
+
+addressSchema = {
+   street: String,
+   city: String,
+   state: String,
+   zip: Number
+}
