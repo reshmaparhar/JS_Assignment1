@@ -6,7 +6,8 @@ Entity
 
 Actors
 1)Resident
-
+2)Guard
+3)Society Members
 
 1)Society
 Attributes:
@@ -17,6 +18,13 @@ Attributes:
 5)Society manager (String)
 6)Contact No (String)
 7)Buildings (array)
+
+addressSchema = {
+   street: String,
+   city: String,
+   state: String,
+   zip: Number
+}
 
 2)Building
 Attributes:
@@ -46,19 +54,32 @@ Attributes:
 1)Resident ID (String)
 2)Resident name (String)
 3)Contact Number (String)
-4)Flats array[flatSchema]
-8)Password(String)
+4)flatSchema array
+5)Password(String)
 
 flatSchema = {
-    Society ID:String,
-    Building ID:String,
-    Wing ID:String,
-    flats : [Flat ID (String)]
+    1)Resident Designation
+    2)Society ID:String,
+    3)Building ID:String,
+    4)Wing ID:String,
+    5)Flat ID :String
+    6)Flat Unique Code
 }
 
-addressSchema = {
-   street: String,
-   city: String,
-   state: String,
-   zip: Number
-}
+
+6)Guard
+Attributes:
+1)Guard ID (String)
+2)Guard name (String)
+3)Society ID (String)
+4)Contact Number (String)
+5)Password(String)
+6)Guard Unique Code
+
+7)Society Member
+1)Member ID (String)
+2)Member name (String)
+3)Society ID (String)
+4)Contact Number (String)
+5)Password(String)
+6)Member Unique Code
